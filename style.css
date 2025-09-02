@@ -1,0 +1,112 @@
+:root {
+  --bg: #060812;
+  --accent: #ff4b4b;
+  --muted: #9fb3c8;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, Arial;
+  background: linear-gradient(180deg, #05060a, #071227);
+}
+
+.center {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.enter {
+  background: linear-gradient(90deg, #06b6d4, #7c3aed);
+  color: #fff;
+}
+
+/* overlay (kiosk) */
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card {
+  background: #071227;
+  border-radius: 12px;
+  padding: 26px;
+  width: min(520px, 90vw);
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.title {
+  font-size: 1.3rem;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.desc {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.pwd {
+  margin-top: 16px;
+}
+
+input[type="password"] {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.hint {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.12);
+  font-size: 0.8rem;
+}
+
+.wm {
+  position: fixed;
+  right: 10px;
+  top: 8px;
+  opacity: 0.06;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  user-select: none;
+}
